@@ -1,0 +1,62 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  background-color: #2ecc71;
+  text-align:center;
+}
+
+.greeting{
+  font-size:60px;
+  letter-spacing: 3px;
+  margin-bottom:15px;
+}
+
+.challenge-question{
+  font-size:25px;
+  width:600px;
+  margin: 0px auto;
+  padding:50px 0px 30px 0px;
+  border-top: solid 3px white;
+}
+
+.container {
+  font-family:Roboto;
+  width:300px;
+  margin:0px auto;
+}
+
+.button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  font-size:22px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.button:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #f7f7f7;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+.button:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+
