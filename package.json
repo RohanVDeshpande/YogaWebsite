@@ -1,0 +1,15 @@
+{
+  "name": "yogawebsite",
+  "version": "1.0.0",
+  "description": "Yoga Website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Rohan V Deshpande",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
