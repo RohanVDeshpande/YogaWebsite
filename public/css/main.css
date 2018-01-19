@@ -1,39 +1,34 @@
-body{
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  background-color: #2ecc71;
-  text-align:center;
+html, body{
+  margin:0;
+  height: 100%;
+  overflow: hidden;
 }
 
-.greeting{
-  font-size:60px;
-  letter-spacing: 3px;
-  margin-bottom:15px;
-}
-
-.challenge-question{
-  font-size:25px;
-  width:600px;
-  margin: 0px auto;
-  padding:50px 0px 30px 0px;
-  border-top: solid 3px white;
+body {
+  background: -webkit-linear-gradient(315deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+  background: linear-gradient(135deg, #55efcb 0%, #1e5799 0%, #55efcb 0%, #5bcaff 100%);
+  color: #f7f7f7;
+  font-family: Roboto;
+  font-weight: 300;
 }
 
 .container {
-  font-family:Roboto;
-  width:300px;
-  margin:0px auto;
+  width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  width:300px;
+  font-size: 25px;
   margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
   border: 2px solid #f7f7f7;
+  border-radius: 10px;
   text-align: center;
-  font-size:22px;
   position: relative;
   overflow: hidden;
   -webkit-transition: .3s;
@@ -51,6 +46,13 @@ body{
   background: #f7f7f7;
 }
 
+.fill-left:after {
+  height: 120%;
+  left: -10%;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  z-index: -1;
+}
 .button:hover {
   cursor: pointer;
 }
@@ -58,5 +60,22 @@ body{
   width: 100%;
   left: 0;
 }
+.fill-left:hover {
+  color: #5bcaff;
+}
+.fill-left:hover:after {
+  left: -10%;
+  width: 120%;
+}
 
+.title{
+  font-size: 75px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-shadow: 5px 5px rgba(0,0,0,0.1);
+}
 
+a{
+  color:inherit;
+  text-decoration: none;
+}
