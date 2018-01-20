@@ -6,10 +6,15 @@ body{
     color:white;
 }
 .quiz-title{
-  font-size:60px;
-  letter-spacing: 1px;
-  margin-bottom:15px;
-  text-align: center;
+    font-size:60px;
+    letter-spacing: 1px;
+    margin-bottom:15px;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+    /*border-bottom: solid 2px;*/
 }
 .container{
     width:600px;
@@ -27,6 +32,9 @@ body{
     display: flex;
 }
 .mdl-slider__container {
+    width: 500px;
+    margin-top: 8px;
+    float: left;
     height: 18px;
     position: relative;
     -webkit-box-orient: horizontal;
@@ -115,4 +123,10 @@ body{
     border-radius: 50%; 
     background: white;
     cursor: pointer;
+}
+.slider-value{
+    font-size: 20px;
+}
+.question{
+    font-size: 24px;
 }
