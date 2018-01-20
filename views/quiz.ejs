@@ -2,8 +2,19 @@
 <html>
 <head>
 	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="/css/quiz.css">
 </head>
 <body>
-	<h1>Quiz Page</h1>
+	<p class="quiz-title">Mastery Challenge</p>
+	<div class="container">
+		<input class="mdl-slider mdl-js-slider" type="range"  min="0" max="100" value="20" tabindex="0" oninput="showVal(this.value)"/> <span class="slider-value">2/10</span>
+	</div>
+	<script type="text/javascript">
+		function showVal(value){
+			document.getElementsByClassName('slider-value')[0].innerHTML = (Math.round(value/10)+"/10");
+		}
+	</script>
 </body>
 </html>
