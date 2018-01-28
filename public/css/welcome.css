@@ -2,12 +2,11 @@ body{
   font-family: 'Roboto', sans-serif;
   color: white;
   background-color: #2ecc71;
-  text-align:center;
-  padding: 5% 0%;
   overflow: hidden;
 }
 .vertical-center{
   padding:8% 0% 12% 0%;
+  text-align:center;
 }
 .greeting{
   font-size:60px;
@@ -67,4 +66,10 @@ a{
   left: 0;
 }
 
-
+.points{
+  font-size: 30px;
+  font-weight: 100;
+  position: relative;
+  top: -10px;
+  left: 10px;
+}

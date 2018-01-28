@@ -17,11 +17,10 @@ body{
     /*border-bottom: solid 2px;*/
 }
 .container{
-    width:600px;
+    max-width:600px;
     margin:0px auto;
-    padding: 10px 50px 50px 50px;
-    border-radius: 20px;
     text-align: center;
+    color:black;
 }
 
 .mdl-slider__container, .mdl-slider__background-flex {
@@ -106,11 +105,11 @@ body{
     padding: 0;
 }
 .mdl-slider__background-lower {
-    background: #ecf0f1;
+    background: #77c2bb;
 }
 
 .mdl-slider__background-upper {
-    background: rgba(0,0,0,.4);
+    background: #b0afaf;
     -webkit-transition: left .18s cubic-bezier(.4,0,.2,1);
     transition: left .18s cubic-bezier(.4,0,.2,1);
 }
@@ -121,7 +120,7 @@ body{
     width: 20px;
     height: 20px;
     border-radius: 50%; 
-    background: white;
+    background: #009688;
     cursor: pointer;
 }
 .slider-value{
@@ -129,4 +128,80 @@ body{
 }
 .question{
     font-size: 24px;
+}
+
+.container-header{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.container-header span{
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2)
+}
+.active-page{
+    background: #FF8F00 !important;
+}
+
+.questions{
+    width: 600px;
+    padding:20px 0px 20px 0px;
+    background:white;
+    box-shadow: 0px 50px 30px -30px rgba(0,0,0,0.3);
+    position: absolute;
+    display: none;
+}
+
+.button {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin: 10px auto;
+  padding: 10px;
+  border: 2px solid #e67e22;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.button:after {
+  position: absolute;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  width: 0;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  background: #e67e22;
+}
+.lrr-button:after {
+  right: 0;
+  left: auto;
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:hover:after {
+  width: 100%;
+  left: 0;
+}
+.form-next{
+    margin-top: 50px;
+    width: 175px;
+    font-size: 20px;
+}
+.active-question{
+    display: block;
 }
