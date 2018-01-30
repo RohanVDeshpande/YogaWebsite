@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
 	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
 	<link rel="stylesheet" href="/css/quiz.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,26 +11,29 @@
 	<p class="quiz-title">Mastery Challenge</p>
 	<div class="container">
 		<div class="container-header"></div>
+		<form id='quiz-form' method="POST" action="/quiz">
 		<div class="question-1 questions q1 active-question">
 			<p class="question">How often do you practice mindfulness?</p>
-			<input class="mdl-slider mdl-js-slider q1" type="range"  min="0" max="100" value="20" tabindex="0" oninput="showVal(this, 10)"/> <span class="slider-value q1"></span>
+			<input name="q1" class="mdl-slider mdl-js-slider q1" type="range"  min="0" max="100" value="20" tabindex="0" oninput="showVal(this, 10)"/> <span class="slider-value q1"></span>
 			<br><br><div class="lrr-button button form-next" onclick="nextPage(this)">Next</div>
 		</div>
 		<div class="question-2 questions q2">
 			<p class="question">How many days per week do you practice Surya Namaskar?</p>
-			<input class="mdl-slider mdl-js-slider q2" type="range"  min="0" max="70" value="20" tabindex="0" oninput="showVal(this, 7)"/> <span class="slider-value q2"></span>
+			<input name="q2" class="mdl-slider mdl-js-slider q2" type="range"  min="0" max="70" value="20" tabindex="0" oninput="showVal(this, 7)"/> <span class="slider-value q2"></span>
 			<br><br><div class="lrr-button button form-next" onclick="nextPage(this)">Next</div>
 		</div>
 		<div class="question-3 questions q3">
 			<p class="question">How many cups of water do you drink per day?</p>
-			<input class="mdl-slider mdl-js-slider q3" type="range"  min="0" max="120" value="40" tabindex="0" oninput="showVal(this, 12)"/> <span class="slider-value q3"></span>
+			<input name="q3" class="mdl-slider mdl-js-slider q3" type="range"  min="0" max="120" value="40" tabindex="0" oninput="showVal(this, 12)"/> <span class="slider-value q3"></span>
 			<br><br><div class="lrr-button button form-next" onclick="nextPage(this)">Next</div>
 		</div>
-		
+		</form>
 	</div>
-	<script type="text/javascript">
+	<div class="display-score">
+		<img src="/images/Om.svg" alt="Om Points" width="175px" height="175px">
+		<span>000</span>
+	</div>
 
-	</script>
 	<script type="text/javascript">
 		function showVal(obj, max){
 			document.getElementsByClassName(obj.classList[2])[2].innerHTML = (Math.round(obj.value/10)+"/"+max);

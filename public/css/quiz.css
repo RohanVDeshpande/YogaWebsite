@@ -222,6 +222,36 @@ body{
   animation: away 600ms ease-in-out forwards;
 }
 
+.display-score{
+    display: none;
+    text-align: center;
+    
+}
+
+.reveal-score{
+    display: block;
+    animation: slideIn 600ms ease-in-out forwards;
+}
+
+.display-score span{
+    font-size: 150px;
+    font-weight: 100;
+    position: relative;
+    top: -35px;
+    margin-left: 40px;
+}
+
+@keyframes slideIn{
+    0%{
+        opacity: 0;
+        transform: translateX(1200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 
 @keyframes out{
   0%{transform: translateY(0px) rotate(0deg)}

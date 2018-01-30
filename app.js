@@ -30,7 +30,7 @@ mongoose.connect(keys.mongodb.dbURI, ()=>{
 
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}))
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 app.use(express.static(__dirname +'/public'))
 
@@ -51,6 +51,12 @@ app.get('/welcome', function(req, res){
 });*/
 
 app.get('/quiz', function(req, res){
+	res.render('quiz')
+});
+
+app.post('/quiz', urlencodedParser, function(req, res){
+	console.log('POST:');
+	console.log(req.body);
 	res.render('quiz')
 });
 
