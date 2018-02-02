@@ -241,6 +241,10 @@ body{
     margin-left: 40px;
 }
 
+.max-score{
+    display: none;
+}
+
 @keyframes slideIn{
     0%{
         opacity: 0;

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="/css/quiz.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class="quiz-title">Mastery Challenge</p>
+	<div class="display-score">
+		<img src="/images/Om.svg" alt="Om Points" width="175px" height="175px">
+		<span>000</span>
+	</div>
+	<div class="max-score"><%=Score.score%></div>
+	<script type="text/javascript" src="/js/score.js"></script>
+	<script type="text/javascript">showScores(parseInt(document.getElementsByClassName('max-score')[0].innerHTML));</script>
+</body>
+</html>

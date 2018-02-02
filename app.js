@@ -1,6 +1,7 @@
 var express = require('express');
-const authRoutes = require('./routes/auth-routes')
-const profileRoutes = require('./routes/profile-routes')
+const authRoutes = require('./routes/auth-routes');
+const profileRoutes = require('./routes/profile-routes');
+const scoreRoutes = require('./routes/score-routes');
 var bodyParser = require('body-parser');
 var path = require('path');
 const passportSetup = require('./config/passport-setup');
@@ -36,6 +37,7 @@ app.use(express.static(__dirname +'/public'))
 
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
+app.use('/quiz', scoreRoutes);
 
 var first_name = 'Rohan'
 
@@ -48,17 +50,30 @@ app.get('/welcome', function(req, res){
 	res.render('welcome', {
 		name: first_name
 	})
-});*/
+});
 
 app.get('/quiz', function(req, res){
 	res.render('quiz')
 });
 
+
 app.post('/quiz', urlencodedParser, function(req, res){
 	console.log('POST:');
 	console.log(req.body);
-	res.render('quiz')
-});
+	var sum = 0;
+	for(var key in req.body){
+		sum+=parseInt(req.body[key])
+	}
+	sum*=5;
+	if(sum<100){
+		sum = 100;
+	}
+	var obj = {'score': sum};
+	console.log(obj);
+	res.render('quizresp',{
+		Score: obj
+	})
+});*/
 
 app.listen(3000, function(){
 	console.log('Server started on port 3000')
